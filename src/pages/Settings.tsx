@@ -1,34 +1,29 @@
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
-import { Shield, Bell, Lock } from "lucide-react";
+import { Bell, Shield, Lock, Eye } from "lucide-react";
 import { toast } from "sonner";
 
 const Settings = () => {
   const handleSave = () => {
-    toast.success("Settings saved successfully");
+    toast.success("Configuración guardada correctamente");
   };
 
   return (
-    <div className="min-h-screen bg-background py-8">
-      <div className="container mx-auto max-w-2xl">
-        <header className="text-center space-y-2 mb-8">
-          <h1 className="text-4xl font-bold text-foreground">Security Settings</h1>
-          <p className="text-muted-foreground">
-            Manage your security preferences and notifications
-          </p>
-        </header>
+    <div className="container mx-auto py-8 px-4">
+      <h1 className="text-4xl font-bold text-primary mb-8">Configuración</h1>
 
-        <div className="space-y-6 bg-card p-6 rounded-lg">
+      <div className="grid gap-8">
+        <div className="bg-card p-6 rounded-lg shadow-lg">
+          <h2 className="text-2xl font-semibold mb-6">Preferencias de Seguridad</h2>
+          
           <div className="space-y-6">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <Shield className="h-5 w-5 text-primary" />
+                <Bell className="h-5 w-5 text-primary" />
                 <div>
-                  <h3 className="text-sm font-medium text-foreground">
-                    Enhanced Protection
-                  </h3>
+                  <p className="font-medium">Notificaciones</p>
                   <p className="text-sm text-muted-foreground">
-                    Enable additional security measures
+                    Recibe alertas sobre actividad sospechosa
                   </p>
                 </div>
               </div>
@@ -37,13 +32,11 @@ const Settings = () => {
 
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <Bell className="h-5 w-5 text-primary" />
+                <Shield className="h-5 w-5 text-primary" />
                 <div>
-                  <h3 className="text-sm font-medium text-foreground">
-                    Security Alerts
-                  </h3>
+                  <p className="font-medium">Monitoreo Avanzado</p>
                   <p className="text-sm text-muted-foreground">
-                    Receive notifications about security threats
+                    Escaneo profundo de la dark web
                   </p>
                 </div>
               </div>
@@ -54,11 +47,22 @@ const Settings = () => {
               <div className="flex items-center gap-3">
                 <Lock className="h-5 w-5 text-primary" />
                 <div>
-                  <h3 className="text-sm font-medium text-foreground">
-                    Two-Factor Authentication
-                  </h3>
+                  <p className="font-medium">Autenticación de dos factores</p>
                   <p className="text-sm text-muted-foreground">
-                    Add an extra layer of security
+                    Aumenta la seguridad de tu cuenta
+                  </p>
+                </div>
+              </div>
+              <Switch />
+            </div>
+
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <Eye className="h-5 w-5 text-primary" />
+                <div>
+                  <p className="font-medium">Modo Privado</p>
+                  <p className="text-sm text-muted-foreground">
+                    Oculta información sensible
                   </p>
                 </div>
               </div>
@@ -66,8 +70,8 @@ const Settings = () => {
             </div>
           </div>
 
-          <Button onClick={handleSave} className="w-full">
-            Save Settings
+          <Button onClick={handleSave} className="mt-6 w-full">
+            Guardar Cambios
           </Button>
         </div>
       </div>
