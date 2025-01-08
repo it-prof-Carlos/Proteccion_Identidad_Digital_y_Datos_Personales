@@ -1,11 +1,26 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { PasswordGenerator } from "@/components/PasswordGenerator";
+import { SecurityStatus } from "@/components/SecurityStatus";
+import { DarkWebMonitor } from "@/components/DarkWebMonitor";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
+    <div className="min-h-screen bg-gray-50 py-8">
+      <div className="container mx-auto space-y-8">
+        <header className="text-center space-y-2">
+          <h1 className="text-4xl font-bold text-primary">
+            Identity Protection Dashboard
+          </h1>
+          <p className="text-gray-600">
+            Secure your digital identity with advanced protection tools
+          </p>
+        </header>
+
+        <SecurityStatus />
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <PasswordGenerator />
+          <DarkWebMonitor />
+        </div>
       </div>
     </div>
   );
