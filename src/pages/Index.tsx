@@ -4,13 +4,13 @@ import { DarkWebMonitor } from "@/components/DarkWebMonitor";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gray-50 py-8">
+    <div className="min-h-screen bg-background py-8">
       <div className="container mx-auto space-y-8">
         <header className="text-center space-y-2">
-          <h1 className="text-4xl font-bold text-primary">
+          <h1 className="text-4xl font-bold text-foreground">
             Identity Protection Dashboard
           </h1>
-          <p className="text-gray-600">
+          <p className="text-muted-foreground">
             Secure your digital identity with advanced protection tools
           </p>
         </header>

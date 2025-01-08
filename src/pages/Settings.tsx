@@ -10,18 +10,18 @@ const Settings = () => {
 
   return (
     <div className="container mx-auto py-8 px-4">
-      <h1 className="text-4xl font-bold text-primary mb-8">Configuración</h1>
+      <h1 className="text-4xl font-bold text-foreground mb-8">Configuración</h1>
 
       <div className="grid gap-8">
         <div className="bg-card p-6 rounded-lg shadow-lg">
-          <h2 className="text-2xl font-semibold mb-6">Preferencias de Seguridad</h2>
+          <h2 className="text-2xl font-semibold mb-6 text-foreground">Preferencias de Seguridad</h2>
           
           <div className="space-y-6">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <Bell className="h-5 w-5 text-primary" />
                 <div>
-                  <p className="font-medium">Notificaciones</p>
+                  <p className="font-medium text-foreground">Notificaciones</p>
                   <p className="text-sm text-muted-foreground">
                     Recibe alertas sobre actividad sospechosa
                   </p>
@@ -34,7 +34,7 @@ const Settings = () => {
               <div className="flex items-center gap-3">
                 <Shield className="h-5 w-5 text-primary" />
                 <div>
-                  <p className="font-medium">Monitoreo Avanzado</p>
+                  <p className="font-medium text-foreground">Monitoreo Avanzado</p>
                   <p className="text-sm text-muted-foreground">
                     Escaneo profundo de la dark web
                   </p>
@@ -47,7 +47,7 @@ const Settings = () => {
               <div className="flex items-center gap-3">
                 <Lock className="h-5 w-5 text-primary" />
                 <div>
-                  <p className="font-medium">Autenticación de dos factores</p>
+                  <p className="font-medium text-foreground">Autenticación de dos factores</p>
                   <p className="text-sm text-muted-foreground">
                     Aumenta la seguridad de tu cuenta
                   </p>
@@ -60,7 +60,7 @@ const Settings = () => {
               <div className="flex items-center gap-3">
                 <Eye className="h-5 w-5 text-primary" />
                 <div>
-                  <p className="font-medium">Modo Privado</p>
+                  <p className="font-medium text-foreground">Modo Privado</p>
                   <p className="text-sm text-muted-foreground">
                     Oculta información sensible
                   </p>

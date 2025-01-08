@@ -18,23 +18,22 @@ const Reports = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (files) {
-      // Aquí se implementaría la lógica de carga de archivos
       toast.success("Reporte enviado correctamente");
     }
   };
 
   return (
     <div className="container mx-auto py-8 px-4">
-      <h1 className="text-4xl font-bold text-primary mb-8">
+      <h1 className="text-4xl font-bold text-foreground mb-8">
         Reportes de Vulnerabilidad
       </h1>
 
       <div className="grid gap-8">
         <div className="bg-card p-6 rounded-lg shadow-lg">
-          <h2 className="text-2xl font-semibold mb-4">Subir Nuevo Reporte</h2>
+          <h2 className="text-2xl font-semibold mb-4 text-foreground">Subir Nuevo Reporte</h2>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="space-y-2">
-              <label className="block text-sm font-medium">
+              <label className="block text-sm font-medium text-foreground">
                 Archivos del Reporte
               </label>
               <Input
@@ -42,7 +41,7 @@ const Reports = () => {
                 onChange={handleFileChange}
                 multiple
                 accept=".pdf,.doc,.docx,.jpg,.png"
-                className="cursor-pointer"
+                className="cursor-pointer bg-background text-foreground"
               />
             </div>
             <Button type="submit" className="w-full">
@@ -53,7 +52,7 @@ const Reports = () => {
         </div>
 
         <Alert>
-          <AlertDescription>
+          <AlertDescription className="text-foreground">
             Aquí puedes subir reportes, fotografías y documentación relacionada con
             vulnerabilidades detectadas. Aceptamos archivos PDF, DOC, y formatos de
             imagen comunes.
